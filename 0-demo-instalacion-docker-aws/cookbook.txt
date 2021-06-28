@@ -1,0 +1,55 @@
+#Actualizar Paquetes
+sudo yum update -y
+
+#Instalar Docker
+sudo amazon-linux-extras install docker -y
+
+#Suber servicio
+sudo service docker start
+
+#Agregar Permisos a usuario
+sudo usermod -a -G docker ec2-user
+
+#Salir de la terminar
+exit
+
+#Ingresar de nuevo
+#Consultar la información
+docker info 
+#Cannot connect to the Docker daemon. Is the docker daemon running on this host? -> Reboot
+
+#Subir servicio
+sudo service docker start 
+
+#Descargar la imagen demo
+docker pull hello-world
+
+#Consular las imagenes
+docker images
+
+#Consular los contenedores
+docker ps -a
+
+#Ejecutar la imagen
+docker run  hello-world 
+
+#Consular las imagenes
+docker images
+
+#Consular los contenedores
+docker ps -a
+
+#Borrar el contenedor
+docker rm XXXXXX
+
+#Consular los contenedores
+docker ps -a
+
+#Consular las imagenes
+docker images
+
+#Borrar la imagen
+docker rmi hello-world
+
+#Consular las imagenes
+docker images
